@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>React Hello World</title>
+    <title>Sally Student Resume</title>
   </head>
   <body>
     <div id="application-root"></div>
@@ -12,30 +12,23 @@
     <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <script type="text/babel">
-      //   const appRoot = document.querySelector("#application-root");
-      //   ReactDOM.render("Hello, world!", appRoot);
-
-      ReactDOM.render(
-        //tree
-        //   tree trunk
-        //branches
-        <div>
-          <h1>Hello, world!</h1>
-          <p>How are you today?</p>
-          <h2>Look what React can do!</h2>
-        </div>,
-        document.querySelector("#application-root")
-      );
-
       function App(props) {
         console.log(props);
         return <header>{props.children}</header>;
       }
-
-      // Nested elements inside the App
       ReactDOM.render(
-        <App className="my-class">
-          <h1>Current Page Title!</h1>
+        <App className="title">
+          <h1>Sally Student Resume</h1>
+          <main>
+            <section className="about">
+              <h2>About Me</h2>
+            </section>
+            <section>
+              <h2>Employment History</h2>
+              <div></div>
+              <div></div>
+            </section>
+          </main>
         </App>,
         document.querySelector("#application-root")
       );
